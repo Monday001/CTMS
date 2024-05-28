@@ -945,7 +945,7 @@ const Student = () => {
     <main className="flex flex-col justify-center place-items-center items-center mx-auto w-full overflow-x-hidden">
       <nav className="py-6 flex justify-between place-items-center  items-center mx-auto relative  w-[100vw] shadow-lg">
         <div className="flex items-center w-[80%] mx-auto justify-around">
-          <Link className="bg-[#313131] border border-gray-700 p-1 rounded-lg flex justify-center items-center" href="/">
+          <Link className="bg-[#50765F] p-1 rounded-lg flex justify-center items-center" href="/">
             <div className="flex items-center">
               <IoMdHome className="relative w-5 h-5 ml-1 mr-1 text-slate-300" />
               <span className=" text-base text-slate-300">Home</span>
@@ -956,7 +956,7 @@ const Student = () => {
             <select
               value={selectedCourse}
               onChange={(e) => setSelectedCourse(e.target.value)}
-              className="border border-gray-700 bg-[#313131] rounded-lg px-2 py-1 mr-2"
+              className="bg-[#50765F] rounded-lg px-2 py-1 mr-2"
             >
               {Object.keys(courseOptions).map((course) => (
                 <option key={course} value={course}>
@@ -968,7 +968,7 @@ const Student = () => {
             <select
               value={selectedYear}
               onChange={(e) => setSelectedYear(e.target.value)}
-              className="border border-gray-700 bg-[#313131] rounded-lg px-3 py-1"
+              className="bg-[#50765F] rounded-lg px-3 py-1"
             >
               {yearOptions.map((year) => (
                 <option key={year} value={year}>
@@ -979,7 +979,7 @@ const Student = () => {
           </div>
           <div>
             <button
-              className="bg-[#313131] border border-gray-700 p-1 rounded-lg w-7 h-7 flex justify-center items-center relative"
+              className="bg-[#50765F] p-1 rounded-lg w-7 h-7 flex justify-center items-center relative"
               onClick={() => setShowNotification(!showNotification)}
             >
               <IoMdNotificationsOutline className="relative w-6 h-6 text-slate-300" />
@@ -991,7 +991,7 @@ const Student = () => {
           </div>
 
           <div>
-            <button className="bg-[#313131] border border-gray-700 p-1 rounded-lg flex justify-center items-center">
+            <button className="bg-[#50765F] border border-gray-700 p-1 rounded-lg flex justify-center items-center">
               <BsFileEarmarkText className="relative text-lg ml-1 mr-1 text-slate-300" />
               <span className=" mr-1 text-base text-slate-300">
               {registrationNumber}
@@ -999,7 +999,7 @@ const Student = () => {
             </button>
           </div>
           <div>
-            <button className="bg-red-500 border border-red-500 p-1 rounded-lg flex justify-center items-center" onClick={logout}>
+            <button className="bg-red-500 p-1 rounded-lg flex justify-center items-center" onClick={logout}>
               <IoIosLogOut className="relative text-lg ml-1 mr-1 text-slate-100" />
               <span className=" mr-1 text-base text-slate-100">
                 LogOut
@@ -1010,36 +1010,36 @@ const Student = () => {
       </nav>
       <section className="grid my-6 gap-x-0 items-center place-items-center justify-center overflow-x-hidden mx-auto w-full grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-3">
         {selectedTimetable && Object.keys(selectedTimetable).map((day, dayIndex) => (
-          <div key={dayIndex} className="flex flex-col justify-center mx-auto place-items-center items-center border border-gray-700 bg-stone-800 rounded-lg w-[80%]">
+          <div key={dayIndex} className="flex flex-col justify-center mx-auto place-items-center items-center bg-[#D0DCD0] rounded-lg w-[80%]">
 
             {selectedTimetable[day][currentTimeOfDay] && (
               <>
-                <div className="flex items-center justify-between p-3 bg-stone-900 w-full rounded-t-lg">
+                <div className="flex items-center justify-between p-3 bg-[#50765F] w-full rounded-t-lg">
                   <h2 className="text-xl font-bold">{day}</h2>
                   <span className="font-semibold text-base text-slate-200">{selectedTimetable[day][currentTimeOfDay].course_name}</span>
                 </div>
                 <div className="flex flex-col justify-center mx-auto w-full p-3 ">
 
                   <div className="flex items-center my-2">
-                    <label htmlFor="" className="text-slate-200 text-base">
+                    <label htmlFor="" className="text-black-200 text-base">
                       Unit:
                     </label>
                     <span className="font-bold text-base ml-3">{selectedTimetable[day][currentTimeOfDay].unit}</span>
                   </div>
                   <div className="flex items-center my-2">
-                    <label htmlFor="" className="text-slate-200 text-base">
+                    <label htmlFor="" className="text-black-200 text-base">
                       Time:
                     </label>
                     <span className="font-bold text-base ml-3">{selectedTimetable[day][currentTimeOfDay].time}</span>
                   </div>
                   <div className="flex items-center my-2">
-                    <label htmlFor="" className="text-slate-200 text-base">
+                    <label htmlFor="" className="text-black-200 text-base">
                       Venue:
                     </label>
                     <span className="font-bold text-base ml-3">{selectedTimetable[day][currentTimeOfDay].venue}</span>
                   </div>
                   <div className="flex items-center my-2">
-                    <label htmlFor="" className="text-slate-200 text-base">
+                    <label htmlFor="" className="text-black-200 text-base">
                       Lecturer:
                     </label>
                     <span className="font-bold text-base ml-3">{selectedTimetable[day][currentTimeOfDay].lec}</span>
@@ -1059,7 +1059,7 @@ const Student = () => {
                       <div
                         key={time}
                         onClick={() => handleItemClick(index, time)}
-                        className={`bg-slate-50 w-3 h-3 rounded-full mx-1 cursor-pointer ${currentTimeOfDay === time ? "opacity-100" : "opacity-50"
+                        className={`bg-green-500 w-3 h-3 rounded-full mx-1 cursor-pointer ${currentTimeOfDay === time ? "opacity-100" : "opacity-30"
                           }`}
                       ></div>
                     ))}

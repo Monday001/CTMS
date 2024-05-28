@@ -51,7 +51,7 @@ export default function LoginPage() {
   }, [user]);
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen py-2 bg-gray-600">
+    <div className="flex flex-col items-center justify-center min-h-screen py-2 bg-[#50765F]">
       <h1 className="text-black font-bold text-5xl mb-5">{loading ? "Processing" : "Sign in to CTMS"}</h1>
       <hr />
 
